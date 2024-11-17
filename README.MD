@@ -53,7 +53,9 @@ Here’s the process of how I arrived at this idea:
 ### Manhattan Distance:
 The Manhattan heuristic computes the sum of the distances each tile is from its goal position:
 > $$
-\ ManhattanDistance(node) = \sum_{i=1}^{n} D_t = |r_i - r'_i| + |c_i - c'_i|
+\ 
+ManhattanDistance(node) = \sum_{i=1}^{n} D_t = |r_i - r'_i| + |c_i - c'_i|
+\
 $$
 where $(ri, ci)$ and $(r'_i, c'_i)$ are the current and goal position of tile i, respectively.
 
@@ -113,7 +115,9 @@ This leads us to the next definition:
 
 Combining it together with the Manhattan distance we get the formula:
 > $$ 
- \ LinearConflict(node) = ManhattanDistance(node) + 2×rowConflict(node) + 2×colConflict(node)
+ \ 
+> LinearConflict(node) = ManhattanDistance(node) + 2×rowConflict(node) + 2×colConflict(node)
+> \
  $$
 
 Almost the same idae wad suggested by Richard E.Korf and Larry A.Taylor in 1966. 
