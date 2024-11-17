@@ -29,10 +29,10 @@ The problem is formalized in the `SlidingPuzzle` class, which defines the puzzle
 
 Here’s an illustration of the blank tile’s movement on 8-puzzle:
 
-|     $$_0$$     |   i-size $$_1$$   |     $$_2$$     |
-|:--------------:|:-----------------:|:--------------:|
-| **i-1** $$_3$$ | **[ i ]** $$_4$$  | **i+1** $$_5$$ |
-|     $$_6$$     | **i+size** $$_7$$ |     $$_8$$     |
+|     $$0$$     |   i-size $$1$$   |     $$2$$     |
+|:-------------:|:----------------:|:-------------:|
+| **i-1** $$3$$ | **[ i ]** $$4$$  | **i+1** $$5$$ |
+|     $$6$$     | **i+size** $$7$$ |     $$8$$     |
 
 
 ---
@@ -57,8 +57,7 @@ The Manhattan heuristic computes the sum of the distances each tile is from its 
 ManhattanDistance(node) = \sum_{i=1}^{n} D_t = |r_i - r'_i| + |c_i - c'_i|
 \
 $$
-
-where $(ri, ci)$ and $(r'_i, c'_i)$ are the current and goal position of tile i, respectively.
+> where $(ri, ci)$ and $(r'_i, c'_i)$ are the current and goal position of tile i, respectively.
 
 However, Manhattan Distance is often too optimistic. For instance, consider this board:
 
