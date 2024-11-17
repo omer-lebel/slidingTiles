@@ -2,9 +2,7 @@
 
 This project is a Python implementation of various search algorithms to solve the **Sliding Puzzle Problem**, including BFS, IDDFS, GBFS, and A*.
 
-The project was created for the **Introduction to Artificial Intelligence (AI)** course at the **Open University**.
-
-**Author**: Omer Lebel  
+The project was created for the **Introduction to Artificial Intelligence (AI)** course at the **Open University**. 
 
 ### struct:
 ```
@@ -120,6 +118,8 @@ LinearConflict(node) = ManhattanDistance(node) + 2×rowConflict(node) + 2×colCo
 > \
  $$
 
+
+### 🖇 further explnation:
 Almost the same idae wad suggested by Richard E.Korf and Larry A.Taylor in 1966. 
 Their formula is much more accurate: for each inversion it counts number of tiles that need to be removed from row/col in order to resolve the conflict.
 For further explanation you may want to read [this article](https://cse.sc.edu/~mgv/csce580sp15/gradPres/HanssonMayerYung1992.pdf). 
