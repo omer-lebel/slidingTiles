@@ -29,10 +29,10 @@ The problem is formalized in the `SlidingPuzzle` class, which defines the puzzle
 
 Here’s an illustration of the blank tile’s movement on 8-puzzle:
 
-|     $$0$$     |   i-size $$1$$   |     $$2$$     |
-|:-------------:|:----------------:|:-------------:|
-| **i-1** $$3$$ | **[ i ]** $$4$$  | **i+1** $$5$$ |
-|     $$6$$     | **i+size** $$7$$ |     $$8$$     |
+|     <br> $$0$$     |   i-size <br> $$1$$   |     <br> $$2$$     |
+|:------------------:|:---------------------:|:------------------:|
+| **i-1** <br> $$3$$ | **[ i ]** <br> $$4$$  | **i+1** <br> $$5$$ |
+|     <br> $$6$$     | **i+size** <br> $$7$$ |     <br> $$8$$     |
 
 
 ---
