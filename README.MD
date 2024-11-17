@@ -46,7 +46,7 @@ The `Node` class defines the structure of a tree node, containing:
 ---
 
 
-## 🔎 Heuristic
+## 🔎 Heuristic.py
 The heuristic used is a soft version of `Linear Conflict`, which is an enhancement of the Manhattan Distance.
 Here’s the process of how I arrived at this idea:
 
@@ -120,6 +120,7 @@ Combining it together with the Manhattan distance we get the formula:
 > \
  $$
 
+### Further reading:
 Almost the same idae wad suggested by Richard E.Korf and Larry A.Taylor in 1966. 
 Their formula is much more accurate: for each inversion it counts number of tiles that need to be removed from row/col in order to resolve the conflict.
 For further explanation you may want to read [this article](https://cse.sc.edu/~mgv/csce580sp15/gradPres/HanssonMayerYung1992.pdf). 
