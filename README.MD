@@ -19,7 +19,7 @@ The problem is formalized in the `SlidingPuzzle` class, which defines the puzzle
 
 - **state:** presenting as a tuple. for n×n puzzle, the size of the state space is n!
 - **initial state:** provided by the user through the command line interface. Can be any valid configuration of the tiles.
-- **goal state:** (0, 1, 2,...,n×n-1) 
+- **goal state:** (0, 1, 2,...,n×n - 1) 
 - **action:** From each state, the blank tile (0) can move in four directions: left, right, up, and down.
 - **tradition model:** Let i be the index of the blank tile. The resulting state after an action is:
   * left: swap(state[i], state[i-1])
@@ -53,7 +53,7 @@ Here’s the process of how I arrived at this idea:
 ### Manhattan Distance:
 The Manhattan heuristic computes the sum of the distances each tile is from its goal position:
 > $$
-\text{Manhattan-Distance(node)} = \sum_{i=1}^{n} D_t = |r_i - r'_i| + |c_i - c'_i|
+\ ManhattanDistance(node) = \sum_{i=1}^{n} D_t = |r_i - r'_i| + |c_i - c'_i|
 $$
 where $(ri, ci)$ and $(r'_i, c'_i)$ are the current and goal position of tile i, respectively.
 
@@ -113,7 +113,7 @@ This leads us to the next definition:
 
 Combining it together with the Manhattan distance we get the formula:
 > $$ 
- \text{Linear-conflict(node) = Manhattan-distance(node) + 2×row-conflict(node) + 2×col-conflict(node)}
+ \ LinearConflict(node) = ManhattanDistance(node) + 2×rowConflict(node) + 2×colConflict(node)
  $$
 
 Almost the same idae wad suggested by Richard E.Korf and Larry A.Taylor in 1966. 
