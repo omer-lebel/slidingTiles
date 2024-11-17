@@ -57,6 +57,7 @@ The Manhattan heuristic computes the sum of the distances each tile is from its 
 ManhattanDistance(node) = \sum_{i=1}^{n} D_t = |r_i - r'_i| + |c_i - c'_i|
 \
 $$
+
 where $(ri, ci)$ and $(r'_i, c'_i)$ are the current and goal position of tile i, respectively.
 
 However, Manhattan Distance is often too optimistic. For instance, consider this board:
