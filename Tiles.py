@@ -56,7 +56,7 @@ class SlidingPuzzle:
 
 def main():
 
-    initial_board = get_stdin_input()
+    initial_board = get_cli_input()
     sliding_puzzle = SlidingPuzzle(initial_board)
 
     print_info("BFS", *bfs(sliding_puzzle))
