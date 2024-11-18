@@ -15,9 +15,10 @@ The project was created for the **Introduction to Artificial Intelligence (AI)**
 ## 🖇️ Tile.py - problem formalization
 The problem is formalized in the `SlidingPuzzle` class, which defines the puzzle's structure and behavior in a general way:
 
-- **state:** presenting as a tuple. for n×n puzzle, the size of the state space is n!
+- **state:** configuration of the board in a flat view, using a tuple. <br>
+for n×n puzzle, the size of the state space is n!
 - **initial state:** provided by the user through the command line interface. Can be any valid configuration of the tiles.
-- **goal state:** (0, 1, 2,...,n×n - 1) 
+- **goal state:** An ordered board, with the blank tile in the upper left corner. represented by (0, 1, 2,...,n×n - 1) 
 - **action:** From each state, the blank tile (0) can move in four directions: left, right, up, and down.
 - **tradition model:** Let i be the index of the blank tile. The resulting state after an action is:
   * left: swap(state[i], state[i-1])
@@ -45,7 +46,7 @@ The `Node` class defines the structure of a tree node, containing:
 
 
 ## 🔎 Heuristic.py
-The heuristic used is a soft version of `Linear Conflict`, which is an enhancement of the Manhattan Distance.
+The heuristic used is a soft version of `Linear Conflict`, which is an enhancement of the **Manhattan Distance**.
 Here’s the process of how I arrived at this idea:
 
 ### Manhattan Distance:
@@ -69,7 +70,7 @@ In this case, tiles 2, 1, 3, and 6 are misplaced, but each of them is a neighbor
 Therefore, the Manhattan distance is $1 + 1 + 1 = 4$, but the actual distance is much larger—22!
 
 If we look on the flat board $(2, 1, 6, 4, 5, 3, 7, 8)$
-We can see in this board that there are 4 inversion in this board. So, to improve the heuristic, we can penalize
+We can see that there are 4 inversion in this board. So, to improve the heuristic, we can penalize
 the Manhattan Distance by adding 1 for each inversion. Formally: 
 ### Inversion heuristic:
 First define an inversion properly:
@@ -123,6 +124,7 @@ LinearConflict(node) = ManhattanDistance(node) + 2×rowConflict(node) + 2×colCo
 ### further explanation:
 Almost the same idae wad suggested by Richard E.Korf and Larry A.Taylor in 1966. 
 Their formula is much more accurate: for each inversion it counts number of tiles that need to be removed from row/col in order to resolve the conflict.
+Korf and Larry proved that this heuristic is admissible. 
 For further explanation you may want to read [this article](https://cse.sc.edu/~mgv/csce580sp15/gradPres/HanssonMayerYung1992.pdf). 
 You can also see the [original article](https://cdn.aaai.org/AAAI/1996/AAAI96-178.pdf).
 
