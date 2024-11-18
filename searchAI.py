@@ -171,7 +171,6 @@ def a_star(problem, heuristic):
 
     # inner function to evaluate A*'s f(n) = g(n) + h(n)
     def evaluate_a_star(node):
-        # print(f"n={node}\tg(n)={node.path_cost} h(n)={heuristic(node)}")
         return node.path_cost + heuristic(node)
 
     return best_search_first(problem, evaluate_a_star)
